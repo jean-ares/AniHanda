@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Flex Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden; /* Prevents scrollbars */
+      padding: 5px 5px;
+    }
+
+    .some-page-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100vh; /* Full height */
+      background-color: red;
+      
+    }
+
+    .top-section {
+      flex: 0 0 25%; /* Fixed 25% height */
+      background-color: green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    .row {
+      flex: 1; /* Remaining 75% */
+      display: flex;
+      width: 100%;
+    }
+
+    .left-column {
+      flex: 0.3;
+      background-color: blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    .right-column {
+      flex: 0.7;
+      background-color: green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    /* Optional: for mobile responsiveness */
+    @media (max-width: 768px) {
+
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="some-page-wrapper"> 
+    <div class="top-section">
+      Welcome Message - 25% Height
+    </div>
+    <div class="row">
+      <div class="left-column">
+        Left Column (30%)
+      </div>
+      <div class="right-column">
+        Right Column (70%)
+      </div>
+    </div>
+  </div>
+</body>
+</html>
